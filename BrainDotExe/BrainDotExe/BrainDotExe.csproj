@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C0A7ECE-6FB3-4D40-8601-71C033892274}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrainDotExe</RootNamespace>
+    <AssemblyName>BrainDotExe</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+	<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EloBuddy">
+      <HintPath>..\..\..\..\..\Desktop\EloBuddyconsole\EloBuddy\System\EloBuddy.dll</HintPath>
+    </Reference>
+    <Reference Include="EloBuddy.Sandbox">
+      <HintPath>..\..\..\..\..\Desktop\EloBuddyconsole\EloBuddy\System\EloBuddy.Sandbox.dll</HintPath>
+    </Reference>
+    <Reference Include="EloBuddy.SDK">
+      <HintPath>..\..\..\..\..\Desktop\EloBuddyconsole\EloBuddy\System\EloBuddy.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>..\..\..\..\..\Desktop\EloBuddyconsole\EloBuddy\System\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9">
+      <HintPath>..\..\..\..\..\Desktop\EloBuddyconsole\EloBuddy\System\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XInput">
+      <HintPath>..\..\..\..\..\Desktop\EloBuddyconsole\EloBuddy\System\SharpDX.XInput.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ImageLoader.cs" />
+    <Compile Include="Common\Render.cs" />
+    <Compile Include="Common\Utility.cs" />
+    <Compile Include="Draw\BlinkDetector.cs" />
+    <Compile Include="Draw\CloneRevelaer.cs" />
+    <Compile Include="Draw\Cooldown.cs" />
+    <Compile Include="Draw\JungleTimers.cs" />
+    <Compile Include="Draw\LastSeenPosition.cs" />
+    <Compile Include="Draw\TowerUtil.cs" />
+    <Compile Include="Draw\WardTracker.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Misc.cs" />
+    <Compile Include="Util\SmiteME.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aatrox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ahri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Akali.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alistar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Amumu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anivia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Annie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ashe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blitzcrank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Braum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caitlyn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cassiopeia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chogath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Corki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Darius.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Draven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DrMundo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ekko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Evelynn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ezreal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiddleSticks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fiora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fizz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Galio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gangplank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Garen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gnar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gragas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hecarim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heimerdinger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Irelia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Janna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JarvanIV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jayce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jinx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kalista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Karma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Karthus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kassadin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Katarina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kayle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kennen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Khazix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kindred.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KogMaw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Leblanc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeeSin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Leona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lissandra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lucian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lulu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Malphite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Malzahar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maokai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MasterYi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MissFortune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonkeyKing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mordekaiser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Morgana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nami.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nasus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nautilus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nidalee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nocturne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nunu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Olaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orianna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pantheon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Poppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quinn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rammus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RekSai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Renekton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rengar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Riven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rumble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ryze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sejuani.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shaco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shyvana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Singed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sivir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skarner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Soraka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Swain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Syndra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TahmKench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Talon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taric.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teemo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tristana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trundle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tryndamere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwistedFate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Twitch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Udyr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Urgot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Varus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vayne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Veigar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Velkoz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Viktor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vladimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Volibear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warwick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xerath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XinZhao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yasuo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yorick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ziggs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zilean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zyra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cassiopeia1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Default.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
